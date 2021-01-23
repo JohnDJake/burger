@@ -15,5 +15,11 @@ const orm = {
             if (err) throw err;
             callback(result);
         });
+    },
+    updateOne(table, objColsVals, condition, callback) {
+        connection.query("UPDATE ?? SET ? WHERE ?", [table, objColsVals, condition], (err, result) => {
+            if (err) throw err;
+            callback(result);
+        });
     }
 }
