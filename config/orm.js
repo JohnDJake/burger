@@ -10,12 +10,14 @@ const orm = {
             callback(result);
         });
     },
+    // Insert one thing into the table
     insertOne(table, objColsVals, callback) {
         connection.query("INSERT INTO ?? SET ?", [table, objColsVals], (err, result) => {
             if (err) throw err;
             callback(result);
         });
     },
+    // Update one thing in the table
     updateOne(table, objColsVals, condition, callback) {
         connection.query("UPDATE ?? SET ? WHERE ?", [table, objColsVals, condition], (err, result) => {
             if (err) throw err;
