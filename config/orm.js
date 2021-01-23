@@ -9,5 +9,11 @@ const orm = {
             if (err) throw err;
             callback(result);
         });
+    },
+    insertOne(table, objColsVals, callback) {
+        connection.query("INSERT INTO ?? SET ?", [table, objColsVals], (err, result) => {
+            if (err) throw err;
+            callback(result);
+        });
     }
 }
