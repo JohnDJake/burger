@@ -11,5 +11,3 @@ const orm = {
         });
     }
 }
-
-orm.selectAll("burgers", result => console.table(result));
