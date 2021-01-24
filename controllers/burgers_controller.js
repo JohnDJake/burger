@@ -13,3 +13,5 @@ router.put("/api/burgers/:id", (req, res) => burgers.updateOne(req.body, req.par
     if (changedRows == 0) res.sendStatus(404);
     else res.sendStatus(200);
 }));
+
+module.exports = router;
