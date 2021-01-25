@@ -9,7 +9,7 @@ router.get("/", (req, res) => burgers.selectAll(burgers => res.render("index", {
 
 router.post("/api/burgers", (req, res) => burgers.insertOne(req.body, ({ insertId: id }) => res.json(id)));
 
-router.put("/api/burgers/:id", (req, res) => burgers.updateOne(req.body, req.params, ({ changedRows }) => {
+router.put("/api/burgers/:id", (req, res) => burgers.updateOne({ ...req.body, devoured: req.body.devoured === "true" }, req.params, ({ changedRows }) => {
     if (changedRows == 0) res.sendStatus(404);
     else res.sendStatus(200);
 }));
