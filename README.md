@@ -36,6 +36,8 @@ You will also need to install the required Node packages. Run `npm install` in t
 
 Either use my deployed link or follow the installation instructions above. Use the form at the bottom of the page to add a new burger to the database. Click "Eat the burger!" to eat a burger that is ready to eat, and click "Make it again!" to re-make a burger that has been eaten.
 
+![Screenshot of the app](public/assets/img/screenshot.png)
+
 
 
 ## Contributing
