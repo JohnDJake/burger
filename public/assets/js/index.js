@@ -9,4 +9,13 @@ $(document).ready(() => {
             location.reload();
         });
     });
+
+    $("#new-burger-form").submit(event => {
+        event.preventDefault();
+        $.post("/api/burgers", { burger_name: $("#new-burger").val().trim() }).then(id => {
+            console.log(id);
+            console.log("success");
+            location.reload();
+        });
+    });
 });
