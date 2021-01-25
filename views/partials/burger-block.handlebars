@@ -1,0 +1,10 @@
+<li class="d-flex justify-content-between my-1">
+    {{id}}. {{burger_name}}
+    <button class="burger-btn btn btn-{{#if devoured}}success{{else}}primary{{/if}}" data-id="{{id}}" data-devoured="{{devoured}}">
+        {{#if devoured}}
+        Make it again!
+        {{else}}
+        Eat the burger!
+        {{/if}}
+    </button>
+</li>
